@@ -38,14 +38,17 @@ interrupt [EXT_INT1] void ext_int1_isr(void)
 {
     lcd_clear();
     lcd_gotoxy(0,1);                     
-    lcd_putsf("INT1 = falling   ");
+    lcd_putsf("INT1 = FALLING   ");
     delay_ms(2000);
 }
 
 // External Interrupt 2 service routine
 interrupt [EXT_INT2] void ext_int2_isr(void)
 {
-// Place your code here
+    lcd_clear();
+    lcd_gotoxy(0,1);                     
+    lcd_putsf("INT2 = RISING   ");
+    delay_ms(2000);
 
 }
 
@@ -109,7 +112,7 @@ lcd_init(16);
 while (1)
       {       
       lcd_clear();
-      lcd_gotoxy(0====,1);
+      lcd_gotoxy(0,1);
       lcd_putsf("Coba EXT Interup");
       delay_ms(200);
 
