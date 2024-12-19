@@ -19,14 +19,14 @@ Komponen:
 
 #include <mega8535.h> 
 
-char absen10 = 00001010;
+char absen10 = 0b00001010;
 
 void main(void)
 { 
-  PORTD = 0xFF;
+  DDRD = 0xFF;
     
 while (1)
     {    
-      DDRD = absen10;
+      PORTD = absen10;
     }
 }
